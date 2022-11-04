@@ -6,13 +6,12 @@ const output = document.querySelector('#name-output');
 console.log(output);
 
  input.addEventListener('input', (event) => {
-        output.textContent = event.currentTarget.value;
+     output.textContent = event.currentTarget.value;
+     
+     if (input.value.length === 0) {
+         output.textContent = 'Anonymous';
+};
+
     })
 
-
-if (input.value.length === 0) {
-    output.textContent = "Anonymous";
-} else (
-   input = 'input'
-   );
 

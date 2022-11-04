@@ -11,14 +11,32 @@ const ingredients = [
 const listEl = document.querySelector('ul');
 console.log(listEl);
 
-for (let i = 0; i < ingredients.length; i++) {
-  const elIngredients = document.createElement('li');
-  elIngredients.textContent = ingredients[i];
-  listEl.append(elIngredients)
 
-  console.log(listEl);
-  console.log(elIngredients);
+const createEl = el => {
+  const ingredientItem = document.createElement('li');
+ ingredientItem.textContent = el;
+ingredientItem.classList.add('item');
+ 
+return ingredientItem
+  
 }
+
+
+const sortEl = ingredients.map(createEl);
+console.log(sortEl)
+
+listEl.append(...sortEl);
+
+
+
+// for (let i = 0; i < ingredients.length; i++) {
+//   const elIngredients = document.createElement('li');
+//   elIngredients.textContent = ingredients[i];
+//   listEl.append(elIngredients)
+
+//   console.log(listEl);
+//   console.log(elIngredients);
+// }
 
 // const list = ingredients.reduce((string, item) => string + `<li>${item}</li>`, '');
 // console.log(list);

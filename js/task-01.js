@@ -10,7 +10,8 @@
 
 const ul = document.querySelectorAll('#categories>li');
 
-
+console.log('Кількість категорій:', ul.length);
+  
 ul.forEach(el => {
       console.log(
           `Категорія: ${el.firstElementChild.textContent}, 

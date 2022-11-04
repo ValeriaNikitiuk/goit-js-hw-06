@@ -26,10 +26,18 @@ function handleSubmit(event) {
     return alert("Заповніть усі поля!");
   }
   
-   console.log(`ЛОГІН: ${email.value}, ПАРОЛЬ: ${password.value}`);
+      
+const formData = new FormData;
+formData.append('email', `${email.value}`);
+formData.append('password', `${password.value}`);
+
+for (const value of formData.values()) {
+   console.log(value);
+}
+
   event.currentTarget.reset(); 
-    };
-    
+};
+ 
 
 
 
