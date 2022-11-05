@@ -16,31 +16,15 @@ const images = [
 const list = document.querySelector('.gallery');
 
 
-
-// const createEl = el => {
-//   const ingredientItem = list.insertAdjacentHTML(
-//     'afterbegin',
-//     `<li><img src = "${el.url}" alt = "${el.alt}"  width = "350" height = "220" /></li>`,
-//   );
-//   return ingredientItem
-// };
-
-
 const list_1 = images.map((image) => list.insertAdjacentHTML(
   'afterbegin',
   `<li><img src = "${image.url}" alt = "${image.alt}"  width = "350" height = "220" /></li>`,
 )).join("");
   
-console.log(list_1)
-list.append(...list_1);
-console.log(list)
 
-//  ingredientItem.textContent = el;
-// ingredientItem.classList.add('item');
- 
-// return ingredientItem
-  
-// }
+
+
+
 
 
 
